@@ -6,12 +6,13 @@ from service.apartment_service import ApartmentService
 
 price_app = FastAPI()
 
+
 # Add a simple root route to avoid 404 errors
 @price_app.get("/")
 async def root():
     return {"message": "Your FastAPI app is running on Render!"}
-@price_app.post("/predict")
+
+
+@price_app.post("/")
 async def predict_price(request: ApartmentRequest) -> ApartmentResponse:
     return ApartmentService().predict_price(request=request)
-
-
