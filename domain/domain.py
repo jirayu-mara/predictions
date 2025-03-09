@@ -10,4 +10,4 @@ class ApartmentRequest(BaseModel):
 
 
 class ApartmentResponse(BaseModel):
-    price: int
+    price: float
