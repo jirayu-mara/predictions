@@ -52,6 +52,7 @@ class ApartmentService:
 
 
 if __name__ == "__main__":
+
     test_request = ApartmentRequest(rooms=2, size=54, bathrooms=1, neighbourhood="central", year_built=1990)
 
     apartment_service = ApartmentService()
