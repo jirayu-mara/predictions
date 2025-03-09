@@ -13,6 +13,6 @@ async def root():
     return {"message": "Your FastAPI app is running on Render!"}
 
 
-@price_app.post("/")
+@price_app.post("/predict")
 async def predict_price(request: ApartmentRequest) -> ApartmentResponse:
     return ApartmentService().predict_price(request=request)
