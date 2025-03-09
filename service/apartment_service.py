@@ -9,8 +9,8 @@ from domain.domain import ApartmentRequest, ApartmentResponse
 
 class ApartmentService:
     def __init__(self):
-        self.path_model = "artifacts/random_forest.pkl"
-        self.path_encoder = "artifacts/neighborhood_encoder.pkl"
+        self.path_model = "../artifacts/random_forest.pkl"
+        self.path_encoder = "../artifacts/neighborhood_encoder.pkl"
         self.model = self.load_artifacts(path_model=self.path_model)
         self.le = self.load_artifacts(path_model=self.path_encoder)
 
@@ -58,4 +58,5 @@ if __name__ == "__main__":
     apartment_service = ApartmentService()
     res = apartment_service.predict_price(request=test_request)
     print(res.price)
+
 

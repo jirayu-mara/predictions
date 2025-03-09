@@ -12,4 +12,3 @@ async def predict_price(request: ApartmentRequest) -> ApartmentResponse:
     return ApartmentService().predict_price(request=request)
 
 
-uvicorn.run("app:price_app", host="0.0.0.0", port=8000)
